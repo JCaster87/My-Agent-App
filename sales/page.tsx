@@ -1,24 +1,26 @@
 import SectorHero from '@/components/marketing/SectorHero';
-import TemplateGallery from '@/components/marketing/TemplateGallery';
 import PricingSection from '@/components/marketing/PricingSection';
+import TemplateGallery from '@/components/marketing/TemplateGallery';
+
+const templates = [{ key: 'sample', name: 'Example', blurb: 'Replace with gallery zip files.', sampleTitle: 'Preview', sampleBody: '...' }];
 
 export default function Page() {
   return (
     <>
       <SectorHero
-        brandName="PipelinePro AI"
-        eyebrow="Built for sales teams"
-        title="Fill your pipeline, daily."
-        subtitle="Cold emails, lead lists, and call scripts — delivered fresh to your inbox."
-        bullets={[ "Prospecting lists curated for your exact target audience.", "Personalized cold email drafts with follow-up sequences.", "Call prep sheets so reps sound confident on every pitch." ]}
+        brandName="Sales App"
+        eyebrow="Built for sales"
+        title="A tailored solution for sales."
+        subtitle="Automate your work with AI templates."
+        bullets={["Time savings", "Lead generation", "Reports"]}
         ctaText="Start for $9.99"
-        accentClass="from-fuchsia-500/10 to-fuchsia-200/40"
-        buttonClass="bg-fuchsia-600"
-        outlineClass="border-fuchsia-600 text-fuchsia-700"
+        accentClass="from-indigo-500/10 to-indigo-200/40"
+        buttonClass="bg-indigo-600"
+        outlineClass="border-indigo-600 text-indigo-700"
         showPlanButtons
         sector="sales"
       />
-      <TemplateGallery templates=[{"{ key: 'sample', name: 'Example', blurb: 'Replace with gallery zip files.', sampleTitle: 'Preview', sampleBody: '...' }"}] />
+      <TemplateGallery templates={templates} />
       <PricingSection sector="sales" />
     </>
   );

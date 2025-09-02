@@ -1,24 +1,26 @@
 import SectorHero from '@/components/marketing/SectorHero';
-import TemplateGallery from '@/components/marketing/TemplateGallery';
 import PricingSection from '@/components/marketing/PricingSection';
+import TemplateGallery from '@/components/marketing/TemplateGallery';
+
+const templates = [{ key: 'sample', name: 'Example', blurb: 'Replace with gallery zip files.', sampleTitle: 'Preview', sampleBody: '...' }];
 
 export default function Page() {
   return (
     <>
       <SectorHero
-        brandName="CareConnect AI"
-        eyebrow="Built for senior living & rehab"
-        title="Grow census. Simplify referrals."
-        subtitle="The only AI assistant built for senior living and rehab facilities."
-        bullets={[ "Weekly census growth and outreach plans, ready to execute.", "Personalized letters and email campaigns for referral sources.", "Family communication digests that keep everyone aligned." ]}
+        brandName="Healthcare App"
+        eyebrow="Built for healthcare"
+        title="A tailored solution for healthcare."
+        subtitle="Automate your work with AI templates."
+        bullets={["Time savings", "Lead generation", "Reports"]}
         ctaText="Start for $9.99"
-        accentClass="from-rose-500/10 to-rose-200/40"
-        buttonClass="bg-rose-600"
-        outlineClass="border-rose-600 text-rose-700"
+        accentClass="from-indigo-500/10 to-indigo-200/40"
+        buttonClass="bg-indigo-600"
+        outlineClass="border-indigo-600 text-indigo-700"
         showPlanButtons
         sector="healthcare"
       />
-      <TemplateGallery templates=[{"{ key: 'sample', name: 'Example', blurb: 'Replace with gallery zip files.', sampleTitle: 'Preview', sampleBody: '...' }"}] />
+      <TemplateGallery templates={templates} />
       <PricingSection sector="healthcare" />
     </>
   );

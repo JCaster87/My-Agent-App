@@ -1,16 +1,18 @@
 import SectorHero from '@/components/marketing/SectorHero';
-import TemplateGallery from '@/components/marketing/TemplateGallery';
 import PricingSection from '@/components/marketing/PricingSection';
+import TemplateGallery from '@/components/marketing/TemplateGallery';
+
+const templates = [{ key: 'sample', name: 'Example', blurb: 'Replace with gallery zip files.', sampleTitle: 'Preview', sampleBody: '...' }];
 
 export default function Page() {
   return (
     <>
       <SectorHero
-        brandName="PromoPilot"
+        brandName="Marketers App"
         eyebrow="Built for marketers"
-        title="Marketing that runs itself."
-        subtitle="Launch campaigns, build leads, and deliver reports on autopilot — so you can focus on strategy, not spreadsheets."
-        bullets={[ "Weekly content calendars & campaign ideas generated instantly.", "Fresh lead lists and cold emails delivered to your inbox.", "Auto-built reports with insights your boss will love." ]}
+        title="A tailored solution for marketers."
+        subtitle="Automate your work with AI templates."
+        bullets={["Time savings", "Lead generation", "Reports"]}
         ctaText="Start for $9.99"
         accentClass="from-indigo-500/10 to-indigo-200/40"
         buttonClass="bg-indigo-600"
@@ -18,7 +20,7 @@ export default function Page() {
         showPlanButtons
         sector="marketers"
       />
-      <TemplateGallery templates=[{"{ key: 'sample', name: 'Example', blurb: 'Replace with gallery zip files.', sampleTitle: 'Preview', sampleBody: '...' }"}] />
+      <TemplateGallery templates={templates} />
       <PricingSection sector="marketers" />
     </>
   );
