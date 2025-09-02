@@ -1,12 +1,6 @@
 import SectorHero from '@/components/marketing/SectorHero';
-import PricingSection from '@/components/marketing/PricingSection';
 import TemplateGallery from '@/components/marketing/TemplateGallery';
-
-const templates = [
-    { key: 'prospect', name: 'Prospecting List', blurb: '50 accounts with ICP notes.', imageSrc: '/screens/sales_1.png', sampleTitle: 'Columns', sampleList: ['Company', 'Contact', 'Title', 'Email', 'ICP reason']},
-    { key: 'emails', name: 'Cold Email Sequence', blurb: '3-touch sequence with personalization slots.', imageSrc: '/screens/sales_2.png', sampleTitle: 'Email 1', sampleBody: 'Subject: Quick idea for {company}\nSaw you just...'},
-    { key: 'call', name: 'Call Script Prep', blurb: 'Objection handlers + discovery questions.', imageSrc: '/screens/sales_3.png', sampleTitle: 'Questions', sampleList: ['What triggers a project?', 'How do you evaluate tools?', 'Who signs off?']}
-  ];
+import PricingSection from '@/components/marketing/PricingSection';
 
 export default function Page() {
   return (
@@ -21,8 +15,10 @@ export default function Page() {
         accentClass="from-fuchsia-500/10 to-fuchsia-200/40"
         buttonClass="bg-fuchsia-600"
         outlineClass="border-fuchsia-600 text-fuchsia-700"
+        showPlanButtons
+        sector="sales"
       />
-      <TemplateGallery templates=[('Prospect List', 'CSV with 50 leads matching your ICP.', 'Name, Role, Email\\nJack Lee, CTO, jack@startup.com'), ('Cold Email Sequence', '3-touch sequence with personalization hooks.', 'Subject: Quick idea for {{Company}}'), ('Call Script', 'Structured talk track with objection handling.', 'Intro → Discovery → Value → Close')] />
+      <TemplateGallery templates=[{"{ key: 'sample', name: 'Example', blurb: 'Replace with gallery zip files.', sampleTitle: 'Preview', sampleBody: '...' }"}] />
       <PricingSection sector="sales" />
     </>
   );

@@ -1,12 +1,6 @@
 import SectorHero from '@/components/marketing/SectorHero';
-import PricingSection from '@/components/marketing/PricingSection';
 import TemplateGallery from '@/components/marketing/TemplateGallery';
-
-const templates = [
-    { key: 'pulse', name: 'Weekly Team Pulse', blurb: 'Auto-summary of wins, risks, blockers.', imageSrc: '/screens/managers_1.png', sampleTitle: 'Risks', sampleBody: 'Hiring delay may slip Q4 milestone by ~2 weeks.'},
-    { key: 'oneonone', name: '1:1 Prep Assistant', blurb: 'Talking points & coaching prompts.', imageSrc: '/screens/managers_2.png', sampleTitle: 'Prompts', sampleList: ['What felt hardest this week?', 'Where do you want more clarity?', 'One thing I can unblock?']},
-    { key: 'qreport', name: 'Quarterly Report', blurb: 'Exec summary + highlights + next quarter.', imageSrc: '/screens/managers_3.png', sampleTitle: 'Outline', sampleBody: 'OKR progress, Highlights, Learnings, Risks, Next quarter focus.'}
-  ];
+import PricingSection from '@/components/marketing/PricingSection';
 
 export default function Page() {
   return (
@@ -21,8 +15,10 @@ export default function Page() {
         accentClass="from-sky-500/10 to-sky-200/40"
         buttonClass="bg-sky-600"
         outlineClass="border-sky-600 text-sky-700"
+        showPlanButtons
+        sector="managers"
       />
-      <TemplateGallery templates=[('Prospect List', 'CSV with 50 leads matching your ICP.', 'Name, Role, Email\\nJack Lee, CTO, jack@startup.com'), ('Cold Email Sequence', '3-touch sequence with personalization hooks.', 'Subject: Quick idea for {{Company}}'), ('Call Script', 'Structured talk track with objection handling.', 'Intro → Discovery → Value → Close')] />
+      <TemplateGallery templates=[{"{ key: 'sample', name: 'Example', blurb: 'Replace with gallery zip files.', sampleTitle: 'Preview', sampleBody: '...' }"}] />
       <PricingSection sector="managers" />
     </>
   );
