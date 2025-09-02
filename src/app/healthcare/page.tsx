@@ -3,9 +3,9 @@ import PricingSection from '@/components/marketing/PricingSection';
 import TemplateGallery from '@/components/marketing/TemplateGallery';
 
 const templates = [
-    { key: 'census', name: 'Census Growth Plan', blurb: 'Outreach calendar + call scripts.', sampleTitle: 'Week 1', sampleBody: 'Mon: Hospitalist calls\nWed: Discharge planner emails\nFri: Family follow-ups'},
-    { key: 'physician', name: 'Physician Outreach Letter', blurb: 'Personalized intro + services + CTA.', sampleTitle: 'Letter', sampleBody: 'Dear Dr. Smith — We support safe, fast transitions with...'},
-    { key: 'family', name: 'Family Update Digest', blurb: 'Weekly summary for families.', sampleTitle: 'Sections', sampleList: ['Care updates', 'Activities', 'Upcoming appointments']}
+    { key: 'census', name: 'Census Growth Plan', blurb: 'Outreach calendar + call scripts.', imageSrc: '/screens/healthcare_1.png', sampleTitle: 'Week 1', sampleBody: 'Mon: Hospitalist calls\nWed: Discharge planner emails\nFri: Family follow-ups'},
+    { key: 'physician', name: 'Physician Outreach Letter', blurb: 'Personalized intro + services + CTA.', imageSrc: '/screens/healthcare_2.png', sampleTitle: 'Letter', sampleBody: 'Dear Dr. Smith — We support safe, fast transitions with...'},
+    { key: 'family', name: 'Family Update Digest', blurb: 'Weekly summary for families.', imageSrc: '/screens/healthcare_3.png', sampleTitle: 'Sections', sampleList: ['Care updates', 'Activities', 'Upcoming appointments']}
   ];
 
 export default function Page() {
@@ -23,7 +23,7 @@ export default function Page() {
         outlineClass="border-rose-600 text-rose-700"
       />
       <TemplateGallery templates=[('Prospect List', 'CSV with 50 leads matching your ICP.', 'Name, Role, Email\\nJack Lee, CTO, jack@startup.com'), ('Cold Email Sequence', '3-touch sequence with personalization hooks.', 'Subject: Quick idea for {{Company}}'), ('Call Script', 'Structured talk track with objection handling.', 'Intro → Discovery → Value → Close')] />
-      <PricingSection />
+      <PricingSection sector="healthcare" />
     </>
   );
 }

@@ -3,9 +3,9 @@ import PricingSection from '@/components/marketing/PricingSection';
 import TemplateGallery from '@/components/marketing/TemplateGallery';
 
 const templates = [
-    { key: 'drip', name: 'Home Seller Drip', blurb: '3-email follow-up sequence.', sampleTitle: 'Email #1', sampleBody: 'Subject: Your home’s 7-day market snapshot\nHi {{firstName}}, here’s what changed this week...'},
-    { key: 'partners', name: 'Referral Partner Builder', blurb: '20 local partners with contact info.', sampleTitle: 'List preview', sampleList: ['Staging pro — jane@...', 'Mortgage broker — tom@...', 'Photographer — snap@...']},
-    { key: 'market', name: 'Market Snapshot', blurb: 'Neighborhood stats in a sharable summary.', sampleTitle: 'Stats', sampleBody: 'Median list price: $412k\nAvg DOM: 21\nInventory: +8% MoM'}
+    { key: 'drip', name: 'Home Seller Drip', blurb: '3-email follow-up sequence.', imageSrc: '/screens/realtors_1.png', sampleTitle: 'Email #1', sampleBody: 'Subject: Your home’s 7-day market snapshot\nHi {firstName}, here’s what changed this week...'},
+    { key: 'partners', name: 'Referral Partner Builder', blurb: '20 local partners with contact info.', imageSrc: '/screens/realtors_2.png', sampleTitle: 'List preview', sampleList: ['Staging pro — jane@...', 'Mortgage broker — tom@...', 'Photographer — snap@...']},
+    { key: 'market', name: 'Market Snapshot', blurb: 'Neighborhood stats in a sharable summary.', imageSrc: '/screens/realtors_3.png', sampleTitle: 'Stats', sampleBody: 'Median list price: $412k\nAvg DOM: 21\nInventory: +8% MoM'}
   ];
 
 export default function Page() {
@@ -23,7 +23,7 @@ export default function Page() {
         outlineClass="border-emerald-600 text-emerald-700"
       />
       <TemplateGallery templates=[('Prospect List', 'CSV with 50 leads matching your ICP.', 'Name, Role, Email\\nJack Lee, CTO, jack@startup.com'), ('Cold Email Sequence', '3-touch sequence with personalization hooks.', 'Subject: Quick idea for {{Company}}'), ('Call Script', 'Structured talk track with objection handling.', 'Intro → Discovery → Value → Close')] />
-      <PricingSection />
+      <PricingSection sector="realtors" />
     </>
   );
 }
